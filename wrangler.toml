@@ -1,0 +1,11 @@
+name = "utc-electoral-lookup"
+main = "worker/src/index.js"
+compatibility_date = "2026-11-18"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "utc-electoral-consulta-2026"
+  database_id = "ad272a8a-bc65-4cd5-b867-0aba93b34585"
+
+[vars]
+ALLOWED_ORIGIN = "https://USUARIO.github.io"

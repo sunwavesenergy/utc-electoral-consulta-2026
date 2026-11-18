@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1769aa">
+  <meta name="description" content="Consulta individual de recinto y junta electoral UTC Cogobierno 2026–2028.">
+  <title>Consulta Electoral UTC | Cogobierno 2026–2028</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="config.js"></script>
+  <script defer src="assets/app.js"></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="brand">
+      <div class="brand-logo"><img src="assets/utc-logo-consejo-electoral.png" alt="Universidad Técnica de Cotopaxi — Secretaría General, Consejo Electoral"></div>
+      <div class="brand-title"><p class="eyebrow">Cogobierno 2026–2028</p><h1>Consulta electoral</h1></div>
+    </header>
+
+    <section class="search-card" aria-labelledby="search-title">
+      <h2 id="search-title">Consulta tu lugar de votación</h2>
+      <p>Ingresa tu número de cédula para conocer tu recinto y junta receptora.</p>
+      <form id="lookup-form" novalidate>
+        <label for="cedula">Número de cédula</label>
+        <div class="search-row"><input id="cedula" name="cedula" inputmode="numeric" autocomplete="off" maxlength="10" placeholder="10 dígitos" aria-describedby="form-help" required><button id="submit" type="submit">Consultar</button></div>
+        <small id="form-help">Usaremos el número únicamente para realizar esta consulta.</small>
+        <div id="turnstile-widget" class="turnstile-widget" aria-label="Verificación de seguridad"></div>
+      </form>
+      <div id="message" class="message" role="status" aria-live="polite" hidden></div>
+    </section>
+
+    <section id="result" class="result" aria-live="polite" hidden>
+      <div class="person-banner"><div class="avatar" aria-hidden="true">●</div><div class="person-copy"><h2 id="person-name"></h2><div class="badges"><span class="badge" id="person-id"></span><span class="badge badge-active">Padrón activo</span></div></div></div>
+      <div class="result-grid">
+        <article class="info-card"><h3><span aria-hidden="true">✓</span> Información electoral</h3><dl>
+          <div><dt>Recinto electoral</dt><dd id="place"></dd></div>
+          <div><dt>Junta receptora</dt><dd id="station"></dd></div>
+          <div><dt>Extensión / sede</dt><dd id="campus"></dd></div>
+        </dl></article>
+        <article class="info-card location-card"><h3><span aria-hidden="true">⌖</span> Ubicación del recinto</h3><div class="location-body"><strong id="map-place"></strong><p id="address"></p><a id="map-link" class="map-button" target="_blank" rel="noopener noreferrer" hidden>↗ &nbsp;Cómo llegar</a><p class="map-note" id="map-note">La dirección y ruta se habilitarán cuando la UTC confirme la ubicación.</p></div></article>
+      </div>
+      <p class="privacy-note">Esta consulta muestra únicamente el registro asociado a la cédula ingresada. Evita usar equipos compartidos.</p>
+    </section>
+    <footer>© 2026 Universidad Técnica de Cotopaxi · Todos los derechos reservados</footer>
+  </main>
+</body>
+</html>

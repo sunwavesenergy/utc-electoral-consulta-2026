@@ -1,0 +1,1 @@
+{"name":"utc-electoral-lookup","private":true,"type":"module","scripts":{"test:worker":"node --test tests/worker.test.mjs"}}
